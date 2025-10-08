@@ -1,0 +1,31 @@
+main {
+  max-width: 24.375rem;
+
+  padding-inline: 2.5rem;
+
+  & section {
+
+    & .fields-numbers {
+      margin-inline: auto;
+      gap: 0.75rem;
+
+      & div {
+        flex-direction: column;
+      }
+      & input {
+        width: 5.375rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        border: none;
+      }
+    }
+  }
+
+}
+
+@media (width >= 80em) {
+  main {
+    max-width: 68.625rem;
+    margin-inline: auto;
+  }
+}
