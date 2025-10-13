@@ -6,8 +6,52 @@
 
 :root {
   --bg-color: #020202;
+  --bg-input: #111012;
+  --bg-input-tertiary: #24222E;
 
-  color: white;
+  /*colors*/
+  --content-brand: #C58DE7;
+  --content-secondary: #C7C9CC;
+
+  /* Fonts-family */
+  --ff-default: 'Roboto Flex', sans-serif;
+  --ff-title: 'Sora', sans-serif;
+  --ff-overline: 'Roboto Mono', sans-serif;
+  --ff-normal: 'Inter', sans-serif;
+
+  /* Fonts-weight */
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-md: 500;
+
+  /* Fonts-size */
+
+  /*titles*/
+  --fs-title-lg: 4.5rem;
+  --fs-title-md: 2.5rem;
+  --fs-title-sm: 2rem;
+  --fs-logo: 1.5rem;
+
+  /*normals*/
+  --fs-default: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-md: 0.875rem;
+  --fs-sm: 0.75rem;
+
+  /* Fonts-line-height */
+  --lh-title: 1.3;
+  --lh-default: 1.5;
+
+  /*vars fonts*/
+  --font-title-primary: var(--fs-title-md)/var(--lh-title) var(--ff-title);
+  --font-logo: var(--fs-logo)/var(--lh-title) var(--ff-title);
+  --font-overline: var(--fs-default)/var(--lh-default) var(--ff-overline);
+  --font-questions: var(--fs-md)/var(--lh-default) var(--ff-default);
+  --font-answers: var(--fs-sm)/var(--lh-default) var(--ff-default);
+  --font-placeholder: var(--fs-title-sm)/var(--lh-default) var(--ff-title);
+  --font-switch: var(--fs-sm)/var(--lh-default) var(--ff-normal);
+  --font-input: var(--fs-default)/var(--lh-default) var(--ff-default);
 }
 
 body {
@@ -20,9 +64,78 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 
+  color: #FFFFFF;
 }
 
 body, html {
   width: 100%;
   height: 100%;
+}
+
+#page-numbers {
+  max-width: 85.375rem;
+  margin-inline: auto;
+}
+
+h1 {
+  font: var(--font-title-primary);
+  font-weight: var(--fw-extra-bold);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-default);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-default);
+}
+
+h3 {
+  font: var(--font-questions);
+  font-weight: var(--fw-md);
+  color: var(--content-brand);
+}
+
+strong {
+  font: var(--font-logo);
+  font-weight: var(--fw-extra-bold);
+  letter-spacing: -0.04em;
+}
+
+.text-overline {
+  font: var(--font-overline);
+  font-weight: var(--fw-bold);
+  background: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font: var(--font-answers);
+  font-weight: var(--fw-md);
+  color: var(--content-secondary);
+}
+
+.sort-number p, label {
+  font-size: var(--fs-default);
+  line-height: var(--lh-default);
+  font-weight: var(--fw-md);
+  font-family: var(--ff-default);
+  color: #C7C9CC;
+}
+
+.option-no-repeat span {
+  font: var(--font-switch);
+}
+
+.toggle-sort-number {
+  font: var(--font-input);
+  font-weight: var(--fw-bold);
+  color: #FFFFFF;
+}
+
+@media(width >= 80em) {
+  :root {
+    --font-title-primary: var(--fs-title-lg)/var(--lh-title) var(--ff-title);
+  }
 }

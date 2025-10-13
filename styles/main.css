@@ -1,9 +1,31 @@
 main {
   max-width: 24.375rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "A"
+  "B"
+  "C"
+  ;
 
-  padding-inline: 2.5rem;
+  & > div:nth-child(1) {
+    grid-area: A;
+    margin-bottom: 2.625rem;
+  }
+
+  & .sort-number {
+      grid-area: B;
+  }
+
+  & .questions {
+      grid-area: C;
+    }
 
   & section {
+    & > div:nth-child(1) {
+      margin-bottom: 2.5rem;
+    }
 
     & .fields-numbers {
       margin-inline: auto;
@@ -12,6 +34,7 @@ main {
       & div {
         flex-direction: column;
       }
+
       & input {
         width: 5.375rem;
         height: 3.5rem;
@@ -19,13 +42,53 @@ main {
         border: none;
       }
     }
-  }
 
+    & .option-no-repeat {
+      margin-top: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    & .toggle-sort-number {
+      width: 100%;
+      height: 3.5rem;
+      background-color: var(--bg-input-tertiary);
+      border-radius: 0.5rem;
+      border: none;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 0.5rem;
+
+      margin-bottom: 5rem;
+
+      cursor: pointer;
+    }
+  }
 }
 
 @media (width >= 80em) {
   main {
     max-width: 68.625rem;
-    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 31.75rem 30.125rem;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "A B"
+    "C B";
+    justify-content: space-between;
+
+    & .sort-number {
+
+      margin-block: auto;
+
+      & .toggle-sort-number {
+        margin-bottom: 0;
+      }
+    }
+
+    & .questions {
+      max-width: 24.125rem;
+    }
   }
 }
