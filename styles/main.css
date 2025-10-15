@@ -16,6 +16,11 @@ main {
 
   & .sort-number {
       grid-area: B;
+
+    }
+
+  .flex-sort {
+    text-align: center;
   }
 
   & .questions {
@@ -66,6 +71,7 @@ main {
     }
   }
 }
+
 
 @media (width >= 80em) {
   main {
