@@ -19,10 +19,6 @@ main {
 
     }
 
-  .flex-sort {
-    text-align: center;
-  }
-
   & .questions {
       grid-area: C;
     }

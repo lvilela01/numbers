@@ -9,6 +9,16 @@
   align-items: center;
 }
 
+.flex-sort {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.display-off {
+  display: none;
+}
+
 @media (width >=80em) {
   .desktop-only {
     display: initial;

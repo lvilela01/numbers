@@ -32,6 +32,7 @@
   --fs-title-md: 2.5rem;
   --fs-title-sm: 2rem;
   --fs-logo: 1.5rem;
+  --fs-result: 3rem;
 
   /*normals*/
   --fs-default: 1rem;
@@ -52,6 +53,7 @@
   --font-placeholder: var(--fs-title-sm)/var(--lh-default) var(--ff-title);
   --font-switch: var(--fs-sm)/var(--lh-default) var(--ff-normal);
   --font-input: var(--fs-default)/var(--lh-default) var(--ff-default);
+  --font-result: var(--fs-result)/var(--lh-default) var(--ff-overline);
 }
 
 body {
@@ -132,6 +134,11 @@ p {
   font: var(--font-input);
   font-weight: var(--fw-bold);
   color: #FFFFFF;
+}
+
+#numbers-sorted {
+  color: var(--content-brand);
+  font: var(--font-result);
 }
 
 @media(width >= 80em) {
