@@ -48,7 +48,7 @@
   --font-title-primary: var(--fs-title-md)/var(--lh-title) var(--ff-title);
   --font-logo: var(--fs-logo)/var(--lh-title) var(--ff-title);
   --font-overline: var(--fs-default)/var(--lh-default) var(--ff-overline);
-  --font-questions: var(--fs-md)/var(--lh-default) var(--ff-default);
+  --font-paragraph: var(--fs-md)/var(--lh-default) var(--ff-default);
   --font-answers: var(--fs-sm)/var(--lh-default) var(--ff-default);
   --font-placeholder: var(--fs-title-sm)/var(--lh-default) var(--ff-title);
   --font-switch: var(--fs-sm)/var(--lh-default) var(--ff-normal);
@@ -112,18 +112,20 @@ strong {
   -webkit-text-fill-color: transparent;
 }
 
-p {
+.questions p {
   font: var(--font-answers);
   font-weight: var(--fw-md);
   color: var(--content-secondary);
 }
 
-.sort-number p, label {
-  font-size: var(--fs-default);
-  line-height: var(--lh-default);
+.sort-number {
+  font: var(--font-paragraph);
   font-weight: var(--fw-md);
-  font-family: var(--ff-default);
-  color: #C7C9CC;
+  color: var(--content-secondary);
+
+  & .fields-numbers label {
+    font-size: var(--fs-default);
+  }
 }
 
 .option-no-repeat span {
@@ -141,8 +143,10 @@ p {
   font: var(--font-result);
 }
 
-@media(width >= 80em) {
+@media (width >= 80em) {
   :root {
     --font-title-primary: var(--fs-title-lg)/var(--lh-title) var(--ff-title);
+
+    --font-paragraph: var(--fs-default)/var(--lh-default) var(--ff-default);
   }
 }
