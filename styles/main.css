@@ -1,5 +1,7 @@
 main {
   max-width: 24.375rem;
+  padding-inline: 2.25rem;
+  padding-block: 2.75rem;
   margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -16,7 +18,6 @@ main {
 
   & .sort-number {
       grid-area: B;
-
     }
 
   & .questions {
