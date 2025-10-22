@@ -20,11 +20,15 @@ switchActive.addEventListener("click", () => {
   switchActive.classList.toggle("active")
 })
 
+let sortCount = 0
+
 // Atualizando o valor de H2 e p quando sorteado.
 toggleSortNumber.addEventListener("click", () => {
   const qtd = Number(quantityNumber.value)
   const min = Number(inNumber.value)
   const max = Number(outNumber.value)
+
+  sortCount++
 
   // Validações
   if (qtd === 0 || min === 0 || max === 0) {
@@ -53,16 +57,14 @@ toggleSortNumber.addEventListener("click", () => {
     }
     results.push(...uniqueNumbers)
   } else {
-    console.log("com repetição");
-
     for (let i = 0; i < qtd; i++) {
       const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
       results.push(randomNumber)
     }
   }
 
-  sortNumberTitle.textContent = "RESULTADO"
-  sortNumberInfo.textContent = ""
+  sortNumberTitle.textContent = "RESULTADO DO SORTEIO"
+  sortNumberInfo.textContent = `${sortCount}º RESULTADO`
   sortNumber.classList.add("flex-sort")
 
   resultNumber.innerHTML = `<p id="numbers-sorted">${results.join(" ")}</p>`
@@ -82,5 +84,6 @@ resultNumber.oninput = () => {
 }
 
 reloadPage.addEventListener("click", () => {
+  sortCount = 0
   location.reload()
 })

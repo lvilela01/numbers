@@ -123,6 +123,10 @@ strong {
   font-weight: var(--fw-md);
   color: var(--content-secondary);
 
+  & h2 {
+    color: #FFFFFF;
+  }
+
   & .fields-numbers label {
     font-size: var(--fs-default);
   }
